@@ -17,7 +17,7 @@ public class Druide {
 		this.effetPotionMin = effetPotionMin;
 		this.effetPotionMax = effetPotionMax;
 		parler("Bonjour, je suis le druide " + nom + "et ma potion magique peut aller d'une force "
-				 + effetPotionMin + " à " + effetPotionMax);
+				 + effetPotionMin + " Ã  " + effetPotionMax);
 		
 	}
 	
@@ -41,16 +41,15 @@ public class Druide {
 
 		forcePotion = random.nextInt(effetPotionMax - effetPotionMin) + effetPotionMin;
 		if (forcePotion > 7) {
-			parler("J'ai préparé une super potion de force " + forcePotion );
+			parler("J'ai prÃ©parÃ© une super potion de force " + forcePotion );
 		} else {
-			parler("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force " + forcePotion);
+			parler("Je n'ai pas trouvÃ© tous les ingrÃ©dients, ma potion est seulement de force " + forcePotion);
 		}
 	}
 	
 	public void booster(Gaulois gaulois) {
-		preparerPotion();
-		if ( gaulois.getNom() = "Obélix") {
-			parler("Non, Obélix ! ... Tu n'auras pas de potion magique !");
+		if ( gaulois.getNom() == "ObÃ©lix") {
+			parler("Non, ObÃ©lix ! ... Tu n'auras pas de potion magique !");
 		} else {
 			gaulois.boirePotion(forcePotion);
 		}

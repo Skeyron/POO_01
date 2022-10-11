@@ -1,18 +1,29 @@
 package histoire;
 
 import personnages.Gaulois;
+import personnages.Druide;
 import personnages.Romains;
 
-public class ScÈnario {
+public class Sc√©nario {
 
 	public static void main(String[] args) {
-		Gaulois asterix = new Gaulois ("AstÈrix", 8);
-		Romains minus = new Romains ("Minus", 6);
-		asterix.parler("Bonjour ‡ tous");
-		minus.parler("UN GAUL... UN GAUGAU...");
+		Gaulois asterix = new Gaulois ("Ast√©rix", 8);
+		Romains minus = new Romains ("Minus", 20);
+		Druide pano = new Druide ("Panoramix",5,10);
+		Gaulois obelix = new Gaulois ("Ob√©lix", 200);
+		
+		pano.parler("Je vais preparer une petite potion");
+		pano.preparerPotion();
+		pano.booster(obelix);
+		obelix.parler("Par B√©l√©nos, ce n'est pas juste");
+		pano.booster(asterix);
+		asterix.parler("Bonjour");
+		minus.parler("UN GAU ... UN GAUGAU...");
 		asterix.frapper(minus);
 		asterix.frapper(minus);
 		asterix.frapper(minus);
+		
+		
 	}
 
 }
