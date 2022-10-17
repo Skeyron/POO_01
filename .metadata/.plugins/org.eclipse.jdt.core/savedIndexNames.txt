@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+Z:\ILU1\POO\workspace\POO_01\.metadata\.plugins\org.eclipse.jdt.core
+2605561000.index
