@@ -49,9 +49,8 @@ public class Gaulois {
 		return "Gaulois [nom = " + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
 	}
 	
-	public void boirePotion(int Potion) {
-		effetPotion = Potion;
-		force = force * effetPotion;
+	public void boirePotion(int potion) {
+		effetPotion = potion;
 		parler("Merci Druide, je sens que ma force est " + effetPotion + " fois décuplée");
 	}
 	
@@ -61,4 +60,3 @@ public class Gaulois {
 	}
 	
 }
-
