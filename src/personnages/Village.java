@@ -30,7 +30,6 @@ public class Village {
 	
 	public Gaulois trouverHabitant(int i) {
 		return villageois[i];
-
 	}
 	
 	public void afficherVillageois(Chef chef) {

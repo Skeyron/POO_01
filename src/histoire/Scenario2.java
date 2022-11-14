@@ -4,7 +4,7 @@ import personnages.Druide;
 import personnages.Equipement;
 import personnages.Gaulois;
 import personnages.Romains;
-import villagegaulois.Musee;
+import personnages.Musee;
 
 public class Scenario2 {
 
@@ -31,12 +31,10 @@ public class Scenario2 {
 		do {
 			asterix.frapper(milexcus);
 		} while (milexcus.getForce() > 0);
-		
-//		Partie a decommenter
-		
-//		Musee musee = new Musee();
-//		asterix.faireUneDonnation(musee);
-
+			
+		Musee musee = new Musee();
+		asterix.faireUneDonation(musee);
+		System.out.println(musee.extraireInstructionsCaml());
 	}
 
 }

@@ -64,13 +64,7 @@ public class Romains {
 			equipementEjecte = ejecterEquipement();
 			parler("J'abandonne...");
 		}
-		
-		if (force > 0) {
-			parler("Aïe");
-		} else { 
-			equipementEjecte = ejecterEquipement();
-			parler("J'abandonne...");
-		}
+
 		// post condition la force a diminuée
 		assert force < oldForce;
 		return equipementEjecte;
@@ -96,6 +90,9 @@ public class Romains {
 		}
 		parler(texte);
 		forceCoup -= resistanceEquipement;
+		if (forceCoup < 0) {
+			forceCoup = 0;
+		}
 		return forceCoup;
 		}
 	

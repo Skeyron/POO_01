@@ -38,11 +38,28 @@ public class Gaulois {
 	public void frapper(Romains romain) {
 		System.out.println(nom + " envoie un grand coup dans la m√¢choire de " + romain.getNom());
 		Equipement[] trophees2 = romain.recevoirCoup((force / 3) * effetPotion);
+//		System.out.println(trophees2.length);
 		for (int i = 0; trophees2 != null && i < trophees2.length; i++, nbTrophees++) {
 			this.trophees[nbTrophees] = trophees2[i];
 		}
 	}
 		
+	
+	public void faireUneDonation(Musee musee) {
+		if (nbTrophees != 0) {
+			String texte = " Je donne au musÈe tous mes trophÈes !";
+			parler(texte);
+			while (nbTrophees != 0) {
+				musee.donnerTrophees( this , trophees[nbTrophees] );
+				System.out.println(" -" + trophees[nbTrophees - 1].name());
+				nbTrophees -= 1;
+			}
+		} else {
+			String textes = " Je n'ai pas  de trophÈes ";
+			parler(textes);
+		}	
+		
+	}
 
 	@Override
 	public String toString() {
@@ -57,6 +74,7 @@ public class Gaulois {
 	public static void main(String[] args) {
 		Gaulois ast = new Gaulois ("Ast√©rix", 9);
 		ast.boirePotion(3);
+		
 	}
 	
 }
